@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Layyah Blog</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: conic-gradient(from 45deg, orange, green);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header img {
+            width: 120px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        header h1 {
+            margin: 5px 0;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: blue;
+        }
+
+        /* MAIN SECTION */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .welcome h2 {
+            color: #16723b;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        article,
+        .quick-links,
+        .gallery {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px #ddd;
+        }
+
+        article h2,
+        .quick-links h2,
+        .gallery h2 {
+            color: #16723b;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            margin-bottom: 12px;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        /* QUICK LINKS */
+        .quick-links ul {
+            list-style: none;
+        }
+
+        .quick-links li {
+            margin: 12px 0;
+        }
+
+        .quick-links a {
+            color: #16723b;
+            text-decoration: none;
+        }
+
+        .quick-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* PHOTO GALLERY */
+        .gallery {
+            margin-top: 10px;
+        }
+
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .gallery-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #173d2a;
+            color: white;
+            padding: 30px 5%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        footer h2 {
+            margin-bottom: 12px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form button {
+            background: orange;
+            color: black;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background: #ffbd4a;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #63816e;
+            margin-top: 25px;
+            padding-top: 15px;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 700px) {
+            .content,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-images {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .article-img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <header id="home">
+
+        <img src="ulblog.png" alt="University Blog Logo">
+
+        <h1>University of Layyah Blog</h1>
+
+        <p>Learning Today, Leading Tomorrow</p>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#articles">Articles</a>
+            <a href="#quick-links">Quick Links</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main class="container">
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome" id="about">
+
+            <h2>Welcome to University of Layyah</h2>
+
+            <p>
+                Welcome to the University of Layyah Blog!
+                This website shares information about university life,
+                educational activities, academic development, and
+                student opportunities.
+            </p>
+
+        </section>
+
+        <div class="content">
+
+            <!-- ARTICLES SECTION -->
+            <section id="articles">
+
+                <!-- ARTICLE 1 -->
+                <article>
+
+                    <h2>Article 1: About University of Layyah</h2>
+
+                    <img
+                        class="article-img"
+                        src="https://ul.edu.pk//storage/career/files/WhatsApp-Image-2026-02-05-at-6-42-04-PM.jpeg"
+                        alt="University of Layyah faculty">
+
+                    <p>
+                        The University of Layyah is a higher education
+                        institution located in Layyah, Punjab, Pakistan.
+                        It provides students with opportunities to gain
+                        knowledge and develop academic and professional
+                        skills.
+                    </p>
+
+                    <p>
+                        University education helps students explore new
+                        ideas, improve their abilities, and prepare for
+                        future careers.
+                    </p>
+
+                </article>
+
+                <!-- ARTICLE 2 -->
+                <article>
+
+                    <h2>Article 2: Student Life at UL</h2>
+
+                    <img
+                        class="article-img"
+                        src="https://ul.edu.pk//storage/career/files/mou2-39f6f.jpeg"
+                        alt="University academic partnership meeting">
+
+                    <p>
+                        Student life is an important part of university
+                        education. Students attend lectures, complete
+                        assignments, participate in practical activities,
+                        and learn from teachers and classmates.
+                    </p>
+
+                    <p>
+                        Group projects and academic activities help
+                        students improve communication, teamwork,
+                        creativity, and problem-solving skills.
+                    </p>
+
+                </article>
+
+            </section>
+
+            <!-- QUICK LINKS SECTION -->
+            <aside class="quick-links" id="quick-links">
+
+                <h2>Quick Links</h2>
+
+                <ul>
+                    <li>
+                        <a href="https://ul.edu.pk/" target="_blank"
+                           rel="noopener noreferrer">
+                            Official University Website
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About the University</a>
+                    </li>
+
+                    <li>
+                        <a href="#articles">University Articles</a>
+                    </li>
+
+                    <li>
+                        <a href="#gallery">Photo Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+
+            </aside>
+
+        </div>
+
+        <!-- PHOTO GALLERY SECTION -->
+        <section class="gallery" id="gallery">
+
+            <h2>University of Layyah Photo Gallery</h2>
+
+            <p>
+                Explore pictures related to university facilities
+                and academic activities.
+            </p>
+
+            <div class="gallery-images">
+
+                <img
+                    src="https://ul.edu.pk//storage/career/files/WhatsApp-Image-2026-02-05-at-6-42-04-PM.jpeg"
+                    alt="University faculty">
+
+                <img
+                    src="https://ul.edu.pk//storage/career/assets/uploads/Gemini_Generated_Image_6n0ejw6n0ejw6n0e.jpg"
+                    alt="University laboratory">
+
+                <img
+                    src="https://ul.edu.pk//storage/career/files/DSC00002-38cf1.jpg"
+                    alt="University event">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <!-- BASIC INFORMATION -->
+            <div>
+
+                <h2>About This Blog</h2>
+
+                <p><strong>University:</strong> University of Layyah</p>
+
+                <p><strong>Location:</strong> Layyah, Punjab, Pakistan</p>
+
+                <p>
+                    A student project created to share university
+                    information and educational content.
+                </p>
+
+                <p>
+                    Official Website:
+                    <a href="https://ul.edu.pk/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       style="color: orange;">
+                        ul.edu.pk
+                    </a>
+                </p>
+
+            </div>
+
+            <!-- CONTACT US FORM -->
+            <div>
+
+                <h2>Contact Us</h2>
+
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message! This demo form does not send emails.');">
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required>
+
+                    <textarea
+                        name="message"
+                        rows="4"
+                        placeholder="Write Your Message"
+                        required></textarea>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="copyright">
+
+            <p>
+                &copy; 2026 University of Layyah Blog.
+                Student Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
